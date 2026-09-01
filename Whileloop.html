@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- while loop -->
+
+    <!-- <div class="result"></div>
+     <button onclick="show()">Show button</button>
+       
+        <div class="res"></div>
+       <button onclick="showProduct()">Product</button> -->
+
+
+    <div class="stdres"> </div>
+
+    <button onclick="showStudentlist()">Show student</button>
+</body>
+
+
+<script>
+
+    // let i = 0;
+    // while (i < 10) {
+    //     document.write(i);
+    //     i++
+    // }
+
+
+
+
+    // let i = 0;
+    // while(i<10){
+    //     document.write('Hello Every one'+ "</br>");
+    //     i++;
+    // }
+
+
+    // function show(){
+    //     let i = 0;
+    //     let result = '';
+
+    //     while(i<10){
+    //        result += 'Hello Every one <br/>';
+    //        i++;
+    //     }
+
+    //     document.getElementsByClassName('result')[0].innerHTML = result
+    // }
+
+
+
+    // function showProduct(){
+    //     let i = 0;
+    //     let result = '';
+
+    //     while(i<10){
+    //          result += 'My name is Ihsan Ullah <br/>';
+    //          i++;
+    //     }
+
+    //     document.getElementsByClassName('res')[0].innerHTML=result;
+    // }
+
+
+
+    function showStudentlist() {
+
+        let student = ['Ihsan', ' Danihs', ' Khan', ' Bangash', ' Ibraheem'];
+        let result = '';
+        let i = 0;
+
+        while (i < student.length) {
+
+            result += student[i];
+            i++;
+        }
+
+        document.getElementsByClassName('stdres')[0].innerHTML = result;
+    }
+</script>
+
+</html>

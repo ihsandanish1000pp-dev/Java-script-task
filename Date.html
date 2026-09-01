@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> How to get Date </h1>
+
+    <div id="res"></div>
+    <button onclick="getDate()">Show Date</button>
+    <button onclick="getyear()">Show Year</button>
+    <button onclick="getMonth()">Show Month</button>
+    <button onclick="todate()">date</button>
+    <button onclick="getSecond()"> Second </button>
+</body>
+
+<script>
+    let date = new Date;
+    function getDate() {
+        document.getElementById('res').innerText = date;
+    }
+
+    function getyear() {
+        document.getElementById('res').innerText = date.getFullYear()
+    }
+
+    function getMonth() {
+        document.getElementById('res').innerText = date.getMonth()
+    }
+
+    function todate() {
+        document.getElementById('res').innerText = date.getDate()
+    }
+
+    function getSecond(){
+        document.getElementById('res').innertext = date.getSeconds();
+    }
+</script>
+
+</html>

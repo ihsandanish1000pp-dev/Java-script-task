@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- if condation -->
+
+    <div class="res"></div>
+    <button onclick="show()">Show list</button>
+
+    <div class="resd"></div>
+    <button onclick="showProduct()">show Product</button>
+    <button onclick="hideProduct()">hide product</button>
+</body>
+
+<script>
+    // var age = 14;
+    // if (age >= 18) {
+
+    //     document.write('Yes you can vote')
+    // } else if (age == 17) {
+    //     document.write('plase Wait one more Year !')
+    // } else {
+    //     document.write('No you can not vote')
+    // }
+
+
+
+
+</script>
+
+<script>
+    function show() {
+        let list = ['Ihsan ', ' Danihs', ' Aman Ullah', ' Rehmat ullah',];
+        let result = ''
+        for (let i = 0; i < list.length; i++) {
+            result += list[i];
+        }
+
+        document.getElementsByClassName('res')[0].innerHTML = result;
+    }
+</script>
+
+
+<script>
+
+    function showProduct() {
+        let prod = ['Shose', ' Shirt', ' watch', 'bag'];
+        let result = ''
+
+        for (i = 0; i <= prod.length; i++) {
+            result += prod[i]
+        }
+
+        document.getElementsByClassName('resd')[0].innerHTML = result
+    }
+
+    function hideProduct() {
+        document.getElementsByClassName('resd')[0].innerHTML = '';
+    }
+
+
+
+</script>
+
+</html>

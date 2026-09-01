@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main {
+
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>how to apply styling with java script</h1>
+
+    <div id="main" onmouseenter="modify()" onmouseleave="unmodify()">Hello Every One</div>
+</body>
+
+
+<script>
+    function modify() {
+        document.getElementById("main").style.color = 'red';
+        document.getElementById('main').style.fontSize = "100px"
+    }
+    function unmodify() {
+        document.getElementById('main').style.color = 'black'
+        document.getElementById("main").style.fontSize = "50px";
+    }
+</script>
+
+</html>

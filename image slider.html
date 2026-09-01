@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Image Slider</h1>
+    <img id='slider' src="image.jpg" width="400px">
+</body>
+
+
+
+
+<script>
+
+    // let images = [
+
+    //     "image.jpg",
+    //     "frame0.jpg",
+    //     "images.jpg",
+    // ]
+
+    // let index = 0;
+    // setInterval(function () {
+    //     index++;
+    //     if (index === images.length)
+    //         index = 0;
+
+
+    //     document.getElementById('slider').src = images[index];
+    // }, 1000)
+
+    
+    let images = [
+
+        "image.jpg",
+        "frame0.jpg",
+        "images.jpg",
+    ]
+
+     let index = 0;
+
+      setInterval(function(){
+         index++;
+
+          if(index===images.length){
+            index = 0;
+          }
+
+           document.getElementById('slider').src = images[index];
+      },1000)
+</script>
+
+</html>

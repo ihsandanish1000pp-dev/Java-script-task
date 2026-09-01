@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- <button onclick="show()">show List</button> -->
+
+    <div id="res"></div>
+    <button onclick="list()">student List</button>
+    <button onclick="closelist()">closed</button>
+    <script>
+
+        //   let arr=[10,20,30,40,50,60,70];
+        //   console.log(arr)
+
+
+
+        //   let arr = ['Ihsan','Danihs','Bilal','Hamza'];
+        //       console.log(arr)
+
+
+        // let fruits = ['Apple', 'Banana', 'Orange', 'PinApple', 'garbig']
+        // document.write(fruits[2])
+
+
+
+        // push Method
+
+
+        // let name = ['Ihsan', 'Danihs', 'Ahmad', 'Ibraheem', 'Yasir']
+        // name.push('Sami')
+        // console.log(name);
+
+
+        // let marks = ['100', '200', '300', '400', '500'];
+        // marks.push('1000')
+        // console.log(marks)
+
+
+        // let product = ['Hp laptop', 'Dell laptop', 'samsung laptop','Youth laptop']
+        //  product.push('Acer Laptop');
+        //  document.write(product)
+
+
+
+
+
+        // pop Method
+
+        //  let fruits = ['Apple','banana','Orange','pinApple'];
+
+        //     fruits.pop()
+        //     console.log(fruits)
+
+
+
+
+        //   let num = ['10','20','30','40','50','60','70']
+        //     num.pop();
+        //     document.write(num)
+
+
+
+
+
+
+
+        //  shift start se remove
+        // let nam = ['Asif', 'Ibraheem','Ahmad', 'Sami','Arif',]
+        // nam.shift()
+        // document.write(nam)
+
+
+        // let num = ['10','20','30','40','50','60','70',]
+        //  num.shift()
+        //  document.write(num);
+
+
+
+
+        // Unshift
+        //   let num = ['10','20','30','40','50','60','70',]
+        //   num.unshift(8999);
+        //   document.write(num)
+
+
+
+        // let arr = ["Ihsan","Danihs","Adil","Mubrak"];
+        // arr.unshift('Ahmad');
+        // document.write(arr)
+
+
+
+
+        // map method
+
+        // let arr = ['ihsan','Danihs','tufail','ibraheem','Bangash']
+
+        //   arr.map(function(arr){
+        //     console.log(arr)
+        //   })
+
+
+
+
+        // let num = ['10', '20', '30', '40', '50', '60', '70']
+        // num.map(function (num) {
+        //     console.log(num)
+        // })
+
+
+
+
+        //  let arr = [10,20,30,40,50];
+
+        //    arr.map(function(item){
+        //       document.write(item + 10 +"</br>")
+        //    });
+
+
+
+
+        // let arr = [10, 20, 30, 40, 50, 60,]
+        //   arr.map(function(item){
+        //     console.log(item+10)
+        //   })
+
+
+
+        // let name = ['Ihsan','Danish','Ahamd','Ibraheem'];
+        // console.log(name)
+
+
+
+        // push
+
+        // var fruit = ['Apple', 'Oraing', 'lemon', 'Pinapple'];
+        // fruit.push('Hello')
+        // document.write(fruit)
+
+
+        // pop
+        // let name = ['Ihsan', 'Danihs', 'Khan', 'Safi', 'Laqman'];
+        // name.pop()
+        // document.write(name)
+
+
+
+
+        // Array Shift
+        //  let arr = [1,2,3,4,5,6,6,7,8,9,];
+        //  arr.shift()
+        //  document.write(arr)
+
+
+
+        // Array Unshift
+        // let num = [10,20,30,40,50,60,70,80,90];
+        // num.unshift(500)
+        // document.write(num)
+
+
+
+        // let cars = ['cars 1', 'cars 2', 'cars 3', 'cars 4', 'cars 5', 'cars 6']
+        // cars.unshift('cars 8')
+        // document.write(cars)
+
+
+
+        // let num = ['10', '20', '30', '40', '50', '60'];
+        //  num.shift('30')
+        // document.write(num);
+
+
+
+        // let fruit = ['Apple', 'Mango', 'Oraing', 'Banana', 'PinApple'];
+        // fruit.pop()
+        // document.write(fruit)
+
+
+
+        // let cars = ['car a' ,'car b','car c' , 'car d', 'car f','car g'];
+
+        // cars.unshift(30)
+        // document.write(cars)
+
+
+
+        // let fruits = ['Apple','Mango','banan','PinApple'];
+        //  document.write(fruit)
+
+        // let num = ['10', '20', '30', '40', '50', '60'];
+        // console.log(num[1])
+
+
+        //    let product = [ 'shirt' , 'shose' , 'clothes' , 'watch' , 'bag'  ];
+        //    document.write(product);
+
+
+
+        // let arr = ['10', '20', '30', '40', '50'];
+
+        // let flage = Array.isArray(arr)
+
+        // console.log(flage)
+
+
+
+        // let arr = ['car 1', 'car 2', 'car 3', 'car 4'];
+
+        // let flage = Array.isArray(arr);
+        // document.write(flage)
+
+        //   let arr = ['car1' , 'car2' , 'car3', 'car4' , 'car5'];
+        //   document.write(arr);
+
+
+        // function show() {
+
+        //     let arr = ['Ihsan', 'Danihs', "ibraheem", 'Bangash'];
+        //     document.write(arr[2]);
+        // }
+
+
+
+
+
+
+
+        // function list() {
+
+        //     let arr = ["Ihsan", "Danish", "Luqman", "zeeshan", "Ibraheen",];
+        //     document.getElementById('res').innerHTML = arr
+        // }
+
+
+        // function closelist() {
+        //     document.getElementById('res').innerHTML = ''
+        // }
+
+
+
+
+
+        //    let fruit = ["Apple", "Banan" ,"Orange"];
+        //    fruit.push("Grapes", 'Lemon')
+        //    document.write(fruit)
+           
+
+
+        // let list = ["Ihsan" , "Danihs" , "Khan"," Ibraheem"];
+
+        // list.pop()
+        // document.write(list);
+    </script>
+</body>
+
+</html>

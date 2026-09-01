@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <h1>Array push Method</h1>
+
+          <div id="res"></div>
+          <button onclick="addcart()">Add Cart</button>
+</body>
+
+
+    <script>
+              let cart=[]
+               function addcart (){
+                  cart.push({
+                   
+                    Name: 'Khumar',
+                    price: 3000,
+                  })
+
+                document.getElementById('res'). innerHTML=
+                 cart[0].Name + "<br/>" +
+                 cart[0].price + "<br/>"
+               }
+    </script>
+</html>

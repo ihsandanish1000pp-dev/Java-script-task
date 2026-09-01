@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+</head>
+
+<body>
+
+    <h2>Place Order</h2>
+
+    <input type="text" id="customer" placeholder="Customer Name">
+    <br><br>
+
+    <input type="text" id="product" placeholder="Product Name">
+    <br><br>
+
+    <input type="number" id="quantity" placeholder="Quantity">
+    <br><br>
+
+    <button onclick="addOrder()">Place Order</button>
+
+    <h2>Orders</h2>
+
+    <div id="result"></div>
+
+
+    <script>
+
+        // Empty array
+        let orders = [];
+
+
+        function addOrder() {
+
+            // Input se values lena
+            let customer = document.getElementById("customer").value;
+            let product = document.getElementById("product").value;
+            let quantity = document.getElementById("quantity").value;
+
+
+            // New order object
+            let order = {
+                customer: customer,
+                product: product,
+                quantity: quantity
+            };
+
+
+            // New order ko array mein add karna
+            orders.push(order);
+
+
+            // Screen par orders show karna
+            let result = "";
+
+            for (let i = 0; i < orders.length; i++) {
+
+                result +=
+                    "Customer: " + orders[i].customer +
+                    " | Product: " + orders[i].product +
+                    " | Quantity: " + orders[i].quantity +
+                    "<br><br>";
+            }
+
+
+            document.getElementById("result").innerHTML = result;
+
+
+            // Inputs clear karna
+            document.getElementById("customer").value = "";
+            document.getElementById("product").value = "";
+            document.getElementById("quantity").value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

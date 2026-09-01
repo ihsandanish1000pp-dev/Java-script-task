@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dabl Click</h1>
+    <!-- <div id = 'res'></div>
+    <button ondblclick="dblclick()"> Click Me </button> -->
+
+
+    <div class="res"></div>
+    <button ondblclick="Showlist()">Show lists</button>
+</body>
+
+
+<script>
+    // function dblclick() {
+    //     document.getElementById('res').innerHTML = 
+    //     'Hello how are You my name is ihsan ullah'
+    // }
+
+
+    function Showlist() {
+        document.getElementsByClassName('res')[0].innerHTML = 'Hello how are You';
+    }
+</script>
+
+</html>

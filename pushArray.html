@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="name" id="addname">
+    <button onclick="test()">Add Name</button>
+    <br> <br>
+    <div id="res"></div>
+
+
+    <br><br><br>
+     
+     <input type="text" name = 'name' id="add">
+      <button onclick="addtocart()"> Add to cart </button>
+      <div id="result"></div>
+
+      <br><br><br>
+     
+      <input type="text" name="Name" id="student"> 
+      <button onclick="showStudent()">List</button>
+      <br><br>
+       
+      <h3>Result:</h3>
+      <div id="main"></div>
+</body>
+
+
+<script>
+    function test() {
+        let std = [];
+        let student = document.getElementById('addname').value;
+        std.push(student);
+        document.getElementById('res').innerText = std;
+    }
+
+
+
+
+      function addtocart(){
+        let cart = [];
+        let  pro = document.getElementById('add').value;
+        cart.push(pro);
+        document.getElementById('result').innerText = cart;
+      }
+
+
+      function showStudent(){
+
+        let arr  = [];
+        let name = document.getElementById('student').value;
+        arr.push(name);
+        document.getElementById('main').innerText = arr;
+      }
+
+
+
+</script>
+
+</html>

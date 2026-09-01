@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+     <h1>Array</h1>
+        
+       <div id="res"></div>
+     <button onclick="showlist()">student List</button>
+     <button onclick="hidelist()">Hide List</button>
+</body>
+
+
+   <script>
+         function showlist(){
+            let std = [ "Ihsan" , "Danihs" , "Usman" , "Khalifa" , "Nasir" , "Sami" ,"Ahmad" , "Ibraheem"];
+            let result = "";
+
+            for( i=0; i<std.length; i++){
+
+                 result += + ( 'i + 1 ') + std[i] + "</br>";
+            }
+            document.getElementById('res').innerHTML = std;
+         }
+
+           function hidelist(){
+            document.getElementById('res').innerHTML = "";
+           }
+   </script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Event -->
+
+    <div id="result"></div>
+    <div id="res"></div>
+    <button onclick="greet()">greet</button>
+    <button onclick="showList()">show product</button>
+</body>
+
+
+<script>
+
+    function greet() {
+        var age = 15;
+        if (age == 18) {
+
+            document.getElementById('res').innerHTML = 'Yes you can vote'
+        } else {
+            document.getElementById('res').innerHTML = 'No you can not vote'
+        }
+    };
+
+
+
+    function showList() {
+
+        let proudct = ['Shose', 'clothes', 'watch', 'shirsts', 'more'];
+        let result = '';
+        for (let i = 0; i < proudct.length; i++) {
+            result += proudct[i] + "<br>"
+        }
+
+        document.getElementById('result').innerHTML = result;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Open Window </h1>
+    <button onclick="openWin()"> Opne Win </button>
+    <button onclick="closeWin()"> colse Win </button>
+</body>
+
+
+<script>
+    var my;
+    function openWin() {
+        my = window.open('https://www.wscubetech.com');
+    }
+
+    function closeWin() {
+        my.close()
+    }
+</script>
+
+</html>

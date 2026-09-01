@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>For loop</h1>
+  <div class="res"></div>
+  <div class="resutl"></div>
+  <button onclick="showProduct()">Show Product</button>
+  <button onclick="showStudent()"> Show student List </button>
+</body>
+
+
+<script>
+
+  // let Name = ['Ihsan', ' Danihs', ' laquman', ' Ahmad', ' Asif', ' Sami'];
+
+  // for (let i = 0; i < Name.length; i++) {
+  //   document.write(Name[i]);
+  // }
+
+
+
+
+  function showProduct() {
+
+    let product = ['Shose', 'Shirt ', 'Clothes ', 'watch ', 'beg ',]
+    let res = ''
+    for (let i = 0; i < product.length; i++) {
+      res += product[i] + " "
+    }
+
+    document.getElementsByClassName('res')[0].innerHTML = res
+  }
+
+
+
+
+
+     for(i = 0 ; i < 10 ; i++){
+      document.write( i + "<br/>")
+     }
+</script>
+
+</html>

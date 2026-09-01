@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #Red {
+
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+        }
+
+        #yellow {
+
+            border: 2px solid yellow;
+            width: 20px;
+            height: 20px;
+            border-radius: 200px;
+            background-color: yellow;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animation -->
+
+    <button onclick="move()">Move</button>
+    <div id="Red">
+        <div id="yellow"></div>
+    </div>
+
+
+</body>
+
+
+<script>
+
+    function move() {
+        let yel = document.getElementById('yellow');
+        let ope = 0;
+        let enim = setInterval(enimt, 5)
+
+
+        function enimt() {
+            if (ope == 50) {
+                clearInterval(enim)
+            } else {
+
+                ope++;
+                yel.style.top = ope + 'px';
+                yel.style.left = ope + 'px'
+
+            }
+        }
+    }
+</script>
+
+</html>

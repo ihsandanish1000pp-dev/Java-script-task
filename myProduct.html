@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Automatic Slideshow</h2>
+
+    <img id="slide" src="img1.jpg" width="400" height="250">
+
+    <script>
+
+        let images = [
+             <Image src = "/Image.jpg"
+                    alt = 'pic'
+                    width = "500"
+                    height = '500'
+             />
+            "img2.jpg",
+            "img3.jpg",
+            "img4.jpg"
+        ];
+
+        let index = 0;
+
+        setInterval(function() {
+
+            index++;
+
+            if (index >= images.length) {
+                index = 0;
+            }
+
+            document.getElementById("slide").src = images[index];
+
+        }, 2000);
+
+    </script>
+
+</body>
+</html>
