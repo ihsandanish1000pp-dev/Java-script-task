@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+        <h5>SetItme out Function</h5>
+          <button onclick="DeletItem()">Delet Item</button>
+          <div id="res"></div>
+</body>
+
+
+
+    <script>
+         function DeletItem(){
+            let status = document.getElementById('res').innerHTML = 'Deleting...';
+
+             setTimeout(function(){
+               document.getElementById("res").innerHTML = 'deleting Successfull';
+             },2000)
+         }
+    </script>
+</html>

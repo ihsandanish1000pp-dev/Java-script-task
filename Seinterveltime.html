@@ -5,87 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        #clock {
-
-            color: red;
-            text-align: center;
-            font-family: sans-serif;
-            font-weight: 900;
-            /* letter-spacing: 5px; */
-
-            font-size: 100px;
-        }
-
-        #images{
-            width: 10;
-            height: 500px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-size: cover;
-        }
-    </style>
 </head>
 
 <body>
 
+    <h1>Set Intervel Time offer </h1>
 
-    <!-- <div id="res"></div>      
-    <div id="clock"></div>   -->
-    <img id="images" src="image.jpg," alt="">
+
+
+    <div id="res"></div>
 </body>
 
 
 <script>
+    //  let count = 0;
 
-    //   let c = 10;
-    //   let my= setInterval( function() {
-    //      document.getElementById('res').innerHTML = c;
-    //      c--
-
-    //       if(c<0){
-    //          clearInterval(my);
-    //       }
-    //   }, 1000);
-
-
-    //   clock
-
-
-    // function showTIme(){
-    //     let time = new Date()
-    //     document.getElementById('clock').innerHTML = time.toLocaleTimeString();  
-    // }
-
-    // setInterval(showTIme,1000)
+    //  setInterval(function(){
+    //     count++;
+    //     document.getElementById('res').innerHTML = count
+    //  },1000)
 
 
 
 
+    let time = 10;
+    let timer = setInterval(function () {
+        time--;
+        document.getElementById('res').innerHTML = time + " Seconds";
 
 
-    // let images = [
-    //     'image.jpg',
-    //     'images.jpg',
-    //     'images1.jpg',
-    // ]
-
-
-    // index = 0;
-
-    // setInterval(function(){
-    //     index++
-
-    //     if (index === images.length) {
-    //         index = 0
-    //     }
-          
-    //        document.getElementById('images').style.backgroundImage = `url("${images[index]}")`;
-    // }, 2000);
-
-
+        if (time === 0) {
+            clearInterval(timer);
+            document.getElementById('res').innerHTML = "Offer Expired"
+        }
+    }, 1000)
 </script>
 
 </html>

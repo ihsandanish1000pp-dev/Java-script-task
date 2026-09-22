@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h5>addEventListener</h5>
+    <h4 id="res">Hello</h4>
+    <button id="btn">ChangText</button>
+    <button id="unbtn">unChange Text</button>
+</body>
+
+
+<script>
+
+    document.getElementById('btn').addEventListener('click', changeText);
+
+    function changeText() {
+        document.getElementById('res').innerText = 'Ihsan'
+    }
+
+    document.getElementById('unbtn').addEventListener('click', unChangeText);
+
+
+
+    function unChangeText() {
+        document.getElementById('res').innerText = 'Hello !'
+    }
+</script>
+
+</html>

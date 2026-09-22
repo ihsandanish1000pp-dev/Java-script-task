@@ -1,35 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-       <!--  contanue  -->
 
-       
+<body>
+    <h1>containue</h1>
 </body>
 
-    <script>
-        // for(let i=0 ; i<=10; i++)
-        // {
-        //     if(i===3){
-        //         continue;
-        //     }
-        //     document.write(i+ "<br/>")
-        // }
+
+<script>
+
+
+    // let product = [
+    //     { name: 'Mobile ', stock: 1 },
+    //     { name: 'Hp laptop ', stock: 0 },
+    //     { name: 'dellLaptop ', stock: 5 },
+    //     { name: 'screen', stock: 0 },
+    // ]
+
+    // for (let i = 0; i < product.length; i++) {
+
+    //     if (product[i].stock === 0) {
+    //         continue;
+    //     }
+
+    //     document.write(product[i].name)
+    // }
 
 
 
 
-        // for(let i = 0 ; i<10; i++){
 
-        //     if(i===5){
-        //           continue;
-        //     }
-        //     document.write(i + "<br/>")
-        // }
-    </script>
+
+
+    //  let product = [
+
+    //      {name : 'Hp Laptop', stock: 0},
+    //      {name : 'Dell laptop' , stock: 2},
+    //      {name : 'latop screen ', stock: 3},
+    //      {name : 'Hp Laptop', stock: 0},
+    //  ]
+
+
+    // for(let i = 0 ; i<product.length ; i++){
+
+    //      if(product[i].stock === 0){
+    //         continue;
+    //      }
+
+    //      document.write(product[i].name)
+    // }
+
+
+
+    let users = [
+
+        { Name: 'Ihsan', active: true },
+        { Name: 'Danihs', active: false },
+        { Name: 'Khan', active: true },
+        { Name: 'Asif', active: true },
+    ]
+
+    for (let i = 0; i < users.length; i++) {
+
+        if (users[i].active === false) {
+            continue;
+        }
+
+        document.write(users[i].Name + "</br>")
+    }
+</script>
+
 </html>

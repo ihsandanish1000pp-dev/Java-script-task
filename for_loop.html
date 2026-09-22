@@ -8,43 +8,29 @@
 </head>
 
 <body>
+
   <h1>For loop</h1>
-  <div class="res"></div>
-  <div class="resutl"></div>
-  <button onclick="showProduct()">Show Product</button>
-  <button onclick="showStudent()"> Show student List </button>
+  <h4 id="res"></h4>
+  <button onclick="list()">Product List </button>
 </body>
 
 
 <script>
+  function list() {
+    let product = ['Laptop', "Mouse", "Keybord", "Screen", 'SSD'];
+    let Result = ''
 
-  // let Name = ['Ihsan', ' Danihs', ' laquman', ' Ahmad', ' Asif', ' Sami'];
-
-  // for (let i = 0; i < Name.length; i++) {
-  //   document.write(Name[i]);
-  // }
-
-
-
-
-  function showProduct() {
-
-    let product = ['Shose', 'Shirt ', 'Clothes ', 'watch ', 'beg ',]
-    let res = ''
     for (let i = 0; i < product.length; i++) {
-      res += product[i] + " "
+      Result += product[i] + "<br/>"
+
+
+      if (product[i] === 'Mouse') {
+        console.log('Mouse is Avliable')
+      }
     }
 
-    document.getElementsByClassName('res')[0].innerHTML = res
+    document.getElementById('res').innerHTML = Result;
   }
-
-
-
-
-
-     for(i = 0 ; i < 10 ; i++){
-      document.write( i + "<br/>")
-     }
 </script>
 
 </html>

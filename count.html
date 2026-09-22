@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h5 id="res">0</h5>
+    <button onclick="counterIncress()">Incress</button>
+    <button onclick="counterDecress()">Decress</button>
+    <button onclick="stop()">stop</button>
+</body>
+
+
+<script>
+
+    // let count = 0
+    // function counterIncress() {
+    //     count++
+    //     document.getElementById('res').innerHTML = count
+    // }
+
+    // function counterDecress(){
+    //     count--
+    //     document.getElementById('res').innerHTML = count;
+    // }
+
+      let count = 0;
+
+      let timer = setInterval(function(){
+        count++
+         document.getElementById('res').innerHTML = count
+      },1000)
+
+
+        function stop(){
+            clearInterval(timer)
+        }
+</script>
+
+</html>

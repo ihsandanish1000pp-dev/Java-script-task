@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h5> Student List</h5>
+     <h4 id="res"></h4>
+    <button onclick="test()">Student List</button>
+</body>
+
+
+
+    <script>
+          function test(){
+            
+            let  list = ["Ihsan" , "Danihs" , "Khan" , "Laquman" , "Sami"];
+            let result = '';
+
+            for(let i = 0 ; i<list.length ; i++){
+
+                result +=  ( 'Wellcome ' + list[i]) + "</br>"
+            }
+            document.getElementById('res').innerHTML = result
+          }
+    </script>
+</html>

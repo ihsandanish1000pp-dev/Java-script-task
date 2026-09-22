@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Slider</title>
+</head>
+
+<body>
+
+    <h1>Our Products</h1>
+
+    <h2 id="product"></h2>
+
+    <script>
+
+        let products = [
+            "Laptop",
+            "Mobile",
+            "Headphones",
+            "Keyboard"
+        ];
+
+        let index = 0;
+
+
+        let timer = setInterval(function () {
+
+            document.getElementById("product").innerHTML =
+                products[index];
+
+            index++;
+
+
+            if (index === products.length) {
+                index = 0;
+            }
+
+        }, 2000);
+
+    </script>
+
+</body>
+
+</html>
+

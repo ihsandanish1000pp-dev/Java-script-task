@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+
+      <h1> Map Function</h1>
+</body>
+
+
+
+<script>
+      //      let list = [ "Ihsan" , "Khan" , "Laquman" , "Mubshar" , "bangash" ];
+
+      //       let newArray = list.map(function(listed){
+      //           return  'Hello '  + listed + "<br/>"
+      //       })
+      //       document.write(newArray)
+
+
+
+
+      //  let product = ["Laptop","Mouse" , "KeyBorad" , "Screen" , "Moniter"];
+
+      //   let arr = product.map(function(pro){
+
+      //        return 'Price ' + pro + "</br>"
+      //   })
+      //   document.write(arr)
+
+
+
+      let products = [
+            { name: "Laptop", price: 80000 },
+            { name: "Mouse", price: 2000 },
+            { name: "Keyboard", price: 5000 }
+      ];
+
+      let productList = products.map(function (product) {
+            return "Product: " + product.name +
+                  " | Price: Rs. " + product.price; + "<br/>"
+      });
+      
+        document.write(productList)
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Set Intervel time</h1>
+    <div id="res"></div>
+</body>
+
+
+
+<script>
+
+
+    let product = [
+
+        "mouse",
+        "KeyBorad",
+        "Screen",
+        "Laptop", 
+    ];
+
+     let index = 0;
+     let timer = setInterval(function(){
+        
+          document.getElementById('res').innerHTML = product[index]
+         index++;
+
+         if(index === product.length){
+            index = 0
+         }
+     },2000)
+</script>
+
+</html>

@@ -2,65 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .main {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fmain {
+      width: 400px;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .fmain label {
+      display: inline-block;
+      width: 90px;
+      font-weight: bold;
+    }
+
+    .inp {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .fmain button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .fmain button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
+
 <body>
-
-    <input type="text" name="name" id="addname">
-    <button onclick="test()">Add Name</button>
-    <br> <br>
-    <div id="res"></div>
-
-
-    <br><br><br>
-     
-     <input type="text" name = 'name' id="add">
-      <button onclick="addtocart()"> Add to cart </button>
-      <div id="result"></div>
-
-      <br><br><br>
-     
-      <input type="text" name="Name" id="student"> 
-      <button onclick="showStudent()">List</button>
+  <div class="main">
+    <form class="fmain">
+      <label>Customer :</label>
+      <input type="text" id="customer" placeholder="customer" class="inp"> <br> <br>
+      <label>Product :</label>
+      <input type="text" id="Product" placeholder="product" class="inp"> <br> <br>
+      <label>Quantity :</label>
+      <input type="text" id="quantity" placeholder="Quantity" class="inp"> <br><br>
+      <button type="button" onclick="orderPlace()">Place Order</button>
+    <br><br>
+       <button type="button" onclick="pop()">Order Remove</button>
       <br><br>
-       
-      <h3>Result:</h3>
-      <div id="main"></div>
+      <h3 id="result"></h3>
+
+    </form>
+
+
+  </div>
 </body>
 
 
+
 <script>
-    function test() {
-        let std = [];
-        let student = document.getElementById('addname').value;
-        std.push(student);
-        document.getElementById('res').innerText = std;
+  let Orders = []
+
+  function orderPlace() {
+    let customer = document.getElementById('customer').value;
+    let Product = document.getElementById('Product').value;
+    let quantity = document.getElementById('quantity').value;
+
+
+    let order = {
+      customer: customer,
+      Product: Product,
+      quantity: quantity,
     }
+    Orders.push(order)
+
+    let result = ''
+
+    for (let i = 0; i < Orders.length; i++)
+
+      result +=
+        "Customer: " + Orders[i].customer +
+        " | Product: " + Orders[i].Product +
+        " | Quantity: " + Orders[i].quantity +
+        "<br><br>";
 
 
+    document.getElementById('result').innerHTML = result
 
 
-      function addtocart(){
-        let cart = [];
-        let  pro = document.getElementById('add').value;
-        cart.push(pro);
-        document.getElementById('result').innerText = cart;
-      }
+    document.getElementById("customer").value = "";
+    document.getElementById("product").value = "";
+    document.getElementById("quantity").value = "";
+  }
 
 
-      function showStudent(){
-
-        let arr  = [];
-        let name = document.getElementById('student').value;
-        arr.push(name);
-        document.getElementById('main').innerText = arr;
-      }
-
-
-
+   function onorder(){
+    Orders.pop()
+    document.getElementById('res').innerHTML = result
+   }
 </script>
 
 </html>

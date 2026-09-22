@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
 </head>
 
-
 <body>
-     <h1>Array</h1>
-        
-       <div id="res"></div>
-     <button onclick="showlist()">student List</button>
-     <button onclick="hidelist()">Hide List</button>
+
+   <!-- Student List -->
+   <h5 id="res"></h5>
+   <button onclick="test()"> Std List</button>
+   <button onclick="hide()">Hide </button>
 </body>
 
 
-   <script>
-         function showlist(){
-            let std = [ "Ihsan" , "Danihs" , "Usman" , "Khalifa" , "Nasir" , "Sami" ,"Ahmad" , "Ibraheem"];
-            let result = "";
+<script>
 
-            for( i=0; i<std.length; i++){
+   function test() {
+      let list = ["Ihsan", "Danihs", "Khan", "Bangash", "sami"];
+      let Result = ''
+      for (i = 0; i <= list.length; i++) {
+         Result += list[i] + "<br/>"
+      }
+      document.getElementById('res').innerHTML = Result
+   }
 
-                 result += + ( 'i + 1 ') + std[i] + "</br>";
-            }
-            document.getElementById('res').innerHTML = std;
-         }
 
-           function hidelist(){
-            document.getElementById('res').innerHTML = "";
-           }
-   </script>
+    function hide(){
+      document.getElementById('res').innerHTML = ''
+      
+    }
+</script>
+
 </html>

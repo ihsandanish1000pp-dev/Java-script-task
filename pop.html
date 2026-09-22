@@ -8,63 +8,73 @@
 </head>
 
 <body>
+
     <h1>Pop Method</h1>
 
-    <div id="res"></div>
-    <!-- <button onclick="Addcart()"> perfurme Price </button>
-    <button onclick="Watchprice()">Watch price</button> -->
-    <button onclick="ShowList()">Show list</button>
-    <button onclick="RemoveList()">Remove List</button>
+
+    <h4 id="res"></h4>
+    <button onclick="addMouse()">Add mouse</button>
+    <button onclick="addKeyborad()">Add keyborad</button>
+    <button onclick="addLaptop()">Add laptop</button>
+    <button onclick="RemoveItem()">Remove Item</button>
 </body>
 
-
 <script>
-    //   let name = ['Ihsan', 'Danihs' , 'Khan' , 'Bangash'];
-    //    name.pop()
-    //   document.getElementById('res').innerHTML = name
+
+
+    let list = [];
+    function addMouse() {
+
+        list.push({
+            Name: 'mouse',
+            price: 1200,
+        })
+
+        showcart()
+    }
+
+
+    function addKeyborad() {
+
+        list.push({
+            Name: 'KeyBorad',
+            price: 2300
+        })
+
+        showcart()
+    }
+
+
+    function addLaptop() {
+        list.push({
+            Name: 'Laptop',
+            price: 23000,
+        })
+
+        showcart()
+    }
 
 
 
-    // function Addcart() {
+    function RemoveItem() {
 
-    //     let cart = [
-    //         { Name: 'perfurme', Price: '3000' },
-    //     ]
-
-    //     document.getElementById('res').innerHTML =
-    //         cart[0].Name + "</br>" +
-    //         cart[0].Price + "</br>";
-
-    // }
+        list.pop();
+        showcart();
+    }
 
 
-
-    // function Watchprice() {
-    //     let watch = [
-    //         { Name: 'Watch', Price: '3400' },
-    //     ]
-
-    //     document.getElementById('res').innerHTML =
-    //         watch[0].Name + "<br>" +
-    //         watch[0].Price;
-    // }
+    function showcart() {
+        let res = "";
 
 
+        for(let i = 0; i < list.length; i++) {
 
-
-    //    function ShowList(){
-    //      let list = ['Ihsan' , 'Danihs' , 'Khan' , 'Ibraheem'];
-    //      list.pop()
-    //     document.getElementById('res').innerHTML = list;
-    //    }
-     
-
-        function RemoveList(){
-            
-              let list =['Ihsan', 'Danihs', 'khan' , 'ibraheem'];
-               list.pop()
-              document.getElementById("res").innerHTML =list
-        }
+            res +=
+                "Name:" + list[i].Name + "</br>" +
+                "price" + list[i].price + "<hr>" 
+         }
+         document.getElementById('res').innerHTML = res;
+    }
 
 </script>
 

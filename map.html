@@ -9,88 +9,119 @@
 
 <body>
 
+    <h1>Map Function</h1>
 
-
-    <script>
-
-        // let numbers = [1, 2, 3, 4, 5];
-
-        // let result = numbers.map(function (num) {
-        //     return num * 2
-        // })
-        // document.write(result)
-
-
-
-        // let numbers = [1,2,3,4,5];
-        // let result= numbers.map(function(num){
-        //     return num*2
-        // })
-        // document.write(result)
-
-
-
-        // let name = ['Ihsan','Danish','Khan','Laqman'];
-        // let result = name.map(function(num){
-        //     return 'Hello' + num;
-        // })
-        // document.write(result)
-
-
-
-        // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
-
-        // let result = numbers.map(function (item) {
-        //     return item * 2;
-        // })
-        // document.write(result)
-
-
-
-
-        //  let furit = ['Apple', 'Orange','Mango'];
-
-        //     let result = furit.map(function (item){
-        //          return 'Hello'+furit;
-        //     })
-        //     document.write(result)
-
-
-
-        // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        // let result = number.map(function (item) {
-        //     return item * 2
-        // })
-        // document.write(result)
-
-
-
-
-        // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        // let result = number.map(function (item) {
-        //     return item * 2
-        // })
-        // document.write(result)
-
-
-        // let price = [1000 , 2000 , 3000];
-
-        // let Newprice = price.map(function (price) {
-        //     return price+100;
-        // })
-
-        // document.write(Newprice)
-
-
-
-          let list = [' Khan', ' Bangash' , ' Khan'];
-          let newList = list.map(function(listed){
-              return  ['Hello'] + listed +"</br>"  
-          })
-
-          document.write(newList)
-    </script>
-
+    <h5 id="res"></h5>
+    <!-- <button onclick="test()">Student List</button>  -->
+    <!-- <div id="products"></div> -->
 </body>
+
+
+<script>
+
+    //         let list =[ "Ihsan" , "Dsnihs" , "Khan" , "Bangash" , "Luqman" , "Sami"];
+
+    //          let std = list.map(function(stdlist){
+    //             return "Well Come  " + stdlist + "<br/>"
+    //          })
+
+    //          document.write(std)
+
+
+
+
+
+    // function test() {
+
+    //     let list = ["Khan", "Ihsan", "Danihs", "Bangash", "muswer", 'Sami'];
+
+    //     let arr = list.map(function (std) {
+    //         return "Hello Every One" + std + "<br/>";
+    //     })
+
+    //     document.getElementById("res").innerHTML = arr.join("")
+    // }
+
+
+
+    // function test() {
+    //     let num = [10, 20, 30, 40, 50, 60];
+
+    //     let arr = num.map(function (pirce) {
+    //         return pirce + 5
+    //     })
+    //     document.getElementById('res').innerHTML = arr
+    // }
+
+
+    // function test() {
+
+
+    //     let list = ["Ihsan", "Danihs", "Ahmad", "Ibraheem",];
+
+    //     let arr = list.map(function (stdList) {
+    //         return stdList.toLowerCase() + "<br/>";
+    //     })
+
+    //     document.getElementById('res').innerHTML = arr.join(" ")
+
+    // }
+
+
+
+
+
+    // let product = ["Mouse", "Screen", "Laptop", "hp laptop"]
+    // let arr = product.map(function (proList) {
+    //     return proList.toLowerCase() + "</br>";
+    // })
+    // document.write(arr.join())
+
+
+
+
+    // let product = ["mouse" , "keyborad" , "screen" , "laptop"];
+    // let arr = product.map(function(prolist){
+    //     return  prolist.toUpperCase()+ "</br>"
+    // })
+    // document.write(arr.join( " " ))
+
+
+
+
+    // let price = [100, 200, 300, 400, 500];
+    // let Newprice = price.map(function (priceList) {
+    //     return priceList * 10
+    // })
+    // document.write(Newprice).join("")
+
+
+
+
+
+
+    let product = [
+
+        { Name: 'Laptop', price: '80000' },
+        { Name: 'Mouse', price: '2000' },
+        { Name: 'Keybord', price: '4000' },
+    ]
+
+    let arr = product.map(function (prolist) {
+
+        return `
+            
+            <div class = 'product-card'>
+                   <h3>
+                     ${prolist.Name} 
+                     <h3/>
+                     <p> Rs.${prolist.price}<p/>
+                        <button> Buy Now <button>
+                </div>
+
+          `;
+          document.getElementById("res").innerHTML = arr.join( "  " )
+    })
+</script>
 
 </html>

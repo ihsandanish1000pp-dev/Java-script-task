@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+
+    <h2>Shopping Cart</h2>
+
+    <button onclick="addLaptop()">Add Laptop</button>
+    <button onclick="addMouse()">Add Mouse</button>
+    <button onclick="addKeyboard()">Add Keyboard</button>
+
+    <br><br>
+
+    <button onclick="removeLast()">Remove Last Product</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+
+        let cart = [];
+
+        function addLaptop() {
+
+            cart.push({
+                product: "Laptop",
+                price: 80000
+            });
+
+            showCart();
+        }
+
+        function addMouse() {
+
+            cart.push({
+                product: "Mouse",
+                price: 2000
+            });
+
+            showCart();
+        }
+
+        function addKeyboard() {
+
+            cart.push({
+                product: "Keyboard",
+                price: 5000
+            });
+
+            showCart();
+        }
+
+        function removeLast() {
+
+            cart.pop();
+
+            showCart();
+        }
+
+        function showCart() {
+
+            let result = "";
+
+            for (let i = 0; i < cart.length; i++) {
+
+                result +=
+                    "Product: " + cart[i].product + "<br>" +
+                    "Price: " + cart[i].price + "<hr>";
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+
+</body>
+</html>
